@@ -6,41 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="button" value="Easy" onclick="">
-    <input type="button" value="Easy" onclick="">
-    <input type="button" value="Easy" onclick="">
-    <p id="guess"></p>
-    <input type="button" value="Lower" onclick="guess(0)">
-    <input type="button" value="Higher" onclick="guess(1)">
-    <input type="button" value="Correct" onclick="guess(2)">
 
-    <script>
-        var highValue=100;
-        var lowValue=1;
-        var mediumValue=Math.floor((highValue+lowValue)/2)
-        var win=0
-        function guess(typeofguess){
-
-        if (typeofguess==0){
-            highValue=mediumValue
-            mediumValue=Math.floor((highValue+lowValue)/2)
-        }
-        else if (typeofguess==1){
-            lowValue=mediumValue
-            mediumValue=Math.floor((highValue+lowValue)/2)
-        }
-        else{
-            alert("Yay i win.")
-            win=1
-        }
-
-        document.getElementById("guess").innerText = mediumValue;
-        if (win==0){
-            alert("Is your number "+Math.floor((highValue+lowValue)/2)+"?")
-        }
-
-        }
-
-    </script>
 </body>
 </html>
